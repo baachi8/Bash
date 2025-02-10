@@ -20,7 +20,7 @@ echo $section
 done
 
 #while loop for countdown
-
+:<< 'EOF'
 #!/bin/bash
 read -p "enter the count that star's from:" count
 while [ "$count" -gt 0 ]; do
@@ -30,3 +30,16 @@ sleep 1
 done
 
 echo "Countdown FINISHED!"
+
+EOF
+
+#using Until loop
+
+#!/bin/bash
+
+until ping -c 1 google.com &> /dev/null; do
+  echo "Waiting for the internet connection..."
+  sleep 3
+done
+
+echo "Internet is up!"
