@@ -3,4 +3,4 @@
 
 str="Baachi"
 num="10"
- echo "Hello" "$str" "10"     
+echo "Hello" "$str" "$num"     
